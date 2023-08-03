@@ -7,7 +7,7 @@ const AddTask = () => {
     const { register, handleSubmit, formState: { errors } } = useForm();
     const onSubmit = data => {
         console.log(data)
-         fetch('http://localhost:5000/tasks', {
+         fetch('https://assignment-mrs-server.vercel.app/tasks', {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json',
@@ -23,7 +23,7 @@ const AddTask = () => {
     
 
     return (
-        <div className=" lg:flex mx-9 gap-4 my-40">
+        <div className=" lg:flex mx-9 gap-4 py-40">
            
             <div className="bg-white p-8 rounded-lg shadow-md lg:w-2/4">
             

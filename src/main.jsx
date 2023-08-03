@@ -19,7 +19,8 @@ const router = createBrowserRouter([
     children:[
       {
         path: '/',
-        element: <Home></Home>
+        element: <Home></Home>,
+        loader: () => fetch(`https://assignment-mrs-server.vercel.app/tasks`)
       },
       {
         path: '/addTask',
@@ -32,7 +33,7 @@ const router = createBrowserRouter([
       {
         path: '/taskList',
         element: <TaskList></TaskList>,
-        loader: () => fetch(`http://localhost:5000/tasks`)
+        loader: () => fetch(`https://assignment-mrs-server.vercel.app/tasks`)
       }
     ]
   },
