@@ -1,0 +1,17 @@
+[
+    {
+        "title": "Buy groceries",
+        "description": "Get eggs, milk, and vegetables from the store.",
+        "status": "todo"
+    },
+    {
+        "title": "Write report",
+        "description": "Compile the research findings and prepare the report document.",
+        "status": "inprogress"
+    },
+    {
+        "title": "Prepare presentation",
+        "description": "Create slides and rehearse for the upcoming meeting.",
+        "status": "done"
+    }
+]
