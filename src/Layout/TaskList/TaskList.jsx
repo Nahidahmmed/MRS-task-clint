@@ -15,8 +15,8 @@ const TaskList = () => {
               <div key={index} className="bg-white p-6 rounded-lg shadow-md">
                 <h3 className="text-lg font-semibold mb-2">{task.title}</h3>
                 <p className="text-gray-600 mb-4">{task.description}</p>
-                <div className={`text-sm px-3 py-1 rounded ${task.status === 'todo' ? 'bg-red-500 text-white' : 'bg-green-500 text-white'}`}>
-                  {task.status === 'todo' ? 'To Do' : 'Done'}
+                <div className={`text-sm px-3 py-1 rounded ${task.status === 'todo' ? 'bg-red-500 text-white' : task.status === 'inprogress' ? 'bg-blue-500 text-white' : 'bg-green-500 text-white'}`}>
+                  {task.status === 'todo' ? 'ToDo' : task.status === 'inprogress' ? 'In Progress' : 'Done'}
                 </div>
               </div>
             ))}

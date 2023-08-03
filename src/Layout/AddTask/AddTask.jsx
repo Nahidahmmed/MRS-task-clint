@@ -7,9 +7,17 @@ const AddTask = () => {
     const { register, handleSubmit, formState: { errors } } = useForm();
     const onSubmit = data => {
         console.log(data)
+         fetch('http://localhost:5000/tasks', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(data),
+          });
+      
+        
     };
     console.log(errors);
-
    
 
     
@@ -56,9 +64,9 @@ const AddTask = () => {
                         {...register("status", {required: true})}
                     >
                         <option value="">Select Status</option>
-                        <option value="todo">To Do</option>
-                        <option value="inProgress">In Progress</option>
-                        <option value="done">Done</option>
+                        <option value="todo">toDo</option>
+                        <option value="inProgress">inprogress</option>
+                        <option value="done">done</option>
                     </select>
                 </div>
                 <button
